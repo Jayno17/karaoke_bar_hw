@@ -9,6 +9,7 @@ class TestRooms < Minitest::Test
 
 def setup
   @room1 = Room.new("Room 1", 6, 0, [])
+  # @song1 = Song.new("Hey Jude", "The Beatles")
 end
 
 def test_room_name()
@@ -29,6 +30,13 @@ def test_check_in_guests()
   assert_equal(2, @room1.number_of_guests)
 
 end
+def test_song_count()
+  assert_equal(0, @room1.song_count)
+end
 
+def test_add_songs_to_room()
+  @room1.add_song_to_room(@song1)
+  assert_equal(1, @room1.song_count)
+end
 
 end

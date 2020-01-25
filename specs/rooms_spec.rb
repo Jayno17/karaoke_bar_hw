@@ -23,4 +23,12 @@ def test_number_of_guests()
   assert_equal(0, @room1.number_of_guests)
 end
 
+def test_check_in_guests()
+  @room1.check_in_guests(2)
+  assert_equal(4, @room1.number_of_places)
+  assert_equal(2, @room1.number_of_guests)
+
+end
+
+
 end

@@ -23,9 +23,6 @@ def test_guest_wallet()
   assert_equal(30, @guest2.wallet)
 end
 
-def test_pay_entry_fee()
-  assert_equal(35, @guest1.take_money_from_guest(15))
-  assert_equal(115, @till)
-end
+
 
 end

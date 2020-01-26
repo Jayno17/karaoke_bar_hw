@@ -9,8 +9,6 @@ attr_reader :name, :favourite_song, :wallet
     @wallet = wallet
   end
 
-  def take_money_from_guest(amount)
-    @wallet -= amount
-  end
+  
 
 end

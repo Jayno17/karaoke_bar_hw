@@ -1,10 +1,14 @@
 class KaraokeBar
 
-  attr_reader :till, :entry_fee
+  attr_reader :rooms, :songs, :till, :entry_fee, :guests
 
-  def initialize(till, entry_fee)
+  def initialize(rooms, songs,till, entry_fee, guests)
+    @rooms = rooms
+    @songs = songs
     @till = till
     @entry_fee = entry_fee
+    @guests = guests
+
   end
 
 
@@ -12,6 +16,8 @@ class KaraokeBar
     @till += amount
   end
 
-
+  def take_money_from_guest(amount)
+    @guest.wallet -= amount
+  end
 
   end

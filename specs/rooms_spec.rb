@@ -49,5 +49,16 @@ def test_add_songs_to_room()
   assert_equal(1, @room1.song_count)
 end
 
+def test_room_capacity__true
+ @room1.check_in_guests(3)
+ assert_equal(true, @room1.check_room_capacity(6))
+
+end
+
+ def test_room_capacity__false
+   @room1.check_in_guests(20)
+   assert_equal(false, @room1.check_room_capacity(6))
+ end
+
 
 end

@@ -1,19 +1,24 @@
 class Room
 
-attr_accessor :name, :number_of_places, :number_of_guests, :songs
+attr_accessor :name, :capacity, :number_of_guests, :songs
 
 
-  def initialize(name, number_of_places, number_of_guests, songs)
+  def initialize(name,capacity , number_of_guests, songs)
     @name = name
-    @number_of_places = number_of_places
+    @capacity = capacity
     @number_of_guests = number_of_guests
     @songs = songs
   end
 
 
 def check_in_guests(number)
-  @number_of_places -= number
-  @number_of_guests += number 
+  @number_of_guests += number
+  @capacity = capacity - number_of_guests
+end
+
+def check_out_guests(number)
+  @number_of_guests -= number
+  @capacity = capacity - number_of_guests
 end
 
  def song_count
